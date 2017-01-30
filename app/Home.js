@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -15,30 +9,6 @@ import {
 } from 'react-native';
 
 import api from './utilities/api';
-var First = require('./app/First');
-
-
-class Main extends Component {
-  render() {
-    return (
-<Navigator 
- initialRoute = {{
-  id: 'First'
- }}
- renderScene={
-  this.navigatorRenderScene
- }
- />
-      );
-  }
-  navigatorRenderScene(route, navigator){
-    _navigator = navigator;
-    switch (route.id){
-      case 'First' :
-       return(<First navigator={navigator} title="First" />);
-    }
-  }
-}
 
 
 export default class fool extends Component {
@@ -140,5 +110,3 @@ const styles = StyleSheet.create({
       }
   
 });
-
-AppRegistry.registerComponent('fool', () => fool);
